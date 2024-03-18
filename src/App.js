@@ -74,6 +74,7 @@
 import React, { useState, useEffect } from 'react';
 import Weather from './Weather';
 import Forecast from './Forecast';
+import './stylebtn.css';
 
 function App() {
   const [location, setLocation] = useState('');
@@ -165,9 +166,12 @@ function App() {
   };
 
   return (
-    <div className="App min-h-screen bg-gray-100 flex flex-col justify-center items-center">
-      <h1 className="text-3xl mb-4">Weather App</h1>
-      <form onSubmit={handleSubmit} className="mb-4">
+    <div className="App min-h-screen p-4 bg-gray-100 flex flex-col justify-center items-center">
+      <button data-text="Awesome" className="buttonpma hover:cursor-not-allowed">
+    <span className="actual-text">&nbsp;WeatherApp&nbsp;</span>
+    <span className="hover-text" aria-hidden="true">&nbsp;WeatherApp&nbsp;</span>
+</button>
+      <form onSubmit={handleSubmit} className="m-12">
         <select
           value={location}
           onChange={handleLocationChange}
